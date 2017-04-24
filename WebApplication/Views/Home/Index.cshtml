@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-app="plunker">
+    <div ng-controller="MainCtrl">
+
+
+        <div style="margin-left:auto; margin-right:auto; text-align:center"><h1>It is an All Data</h1></div>
+
+ 
+        <hr />
+        <div>Total count: {{totalItems}}</div>
+        <table id="mytable" class="table table-striped">
+            <thead>
+                <tr class="table-head">
+                    <th>LogId</th>
+                    <th>IPAddress</th>
+                    <th>CompaniName</th>
+                    <th>LogTime</th>
+                    <th>TypeOfRequest</th>
+                    <th>ResultOfRequest</th>
+                    <th>PathToFile</th>
+                    <th>SizeOfFile</th>
+                    <th>TitlePage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in Logs">
+                    <th>
+                        <div>
+                            {{item.LogId}}
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            {{item.IPAddress}}
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            {{item.CompaniName}}
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            {{item.LogTime}}
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            {{item.TypeOfRequest}}
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            {{item.ResultOfRequest}}
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            {{item.PathToFile}}
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            {{item.SizeOfFile}}
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            {{item.TitlePage}}
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+
+        <uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"></uib-pagination>
+
+
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/Controllers/LogsController.js"></script>
