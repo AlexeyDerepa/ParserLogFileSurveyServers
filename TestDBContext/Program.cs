@@ -50,7 +50,7 @@ namespace TestDBContext
 
             //string path = @"C:\Users\Alexey\Documents\Visual Studio 2017\Projects\regex_from_file\regex_from_file\data\tariscope.com.access.log.0";
             string path = @"tariscope.com.access.log.0";
-            ProcessingData pd = new ProcessingData(nameDB);
+            ProcessingData pd = new ProcessingData("DBConnection");
             pd.StartProcessFromFile(path);
             Console.WriteLine("All OK");
             Console.Read();

@@ -14,15 +14,15 @@
         <table id="mytable" class="table table-striped">
             <thead>
                 <tr class="table-head">
-                    <th>LogId</th>
-                    <th>IPAddress</th>
-                    <th>CompaniName</th>
-                    <th>LogTime</th>
-                    <th>TypeOfRequest</th>
-                    <th>ResultOfRequest</th>
-                    <th>PathToFile</th>
-                    <th>SizeOfFile</th>
-                    <th>TitlePage</th>
+                    <th>Id</th>
+                    <th>IP Address</th>
+                    <th>Compani Name</th>
+                    <th>Log Time</th>
+                    <th>Type Of Request</th>
+                    <th>Result Of Request</th>
+                    <th>Path To File</th>
+                    <th>Size Of File</th>
+                    <th>Title Page</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,7 +34,7 @@
                     </th>
                     <th>
                         <div>
-                            {{item.IPAddress}}
+                            {{item.IPAddressString}}
                         </div>
                     </th>
                     <th>
@@ -76,7 +76,7 @@
             </tbody>
         </table>
 
-        <uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"></uib-pagination>
+        <uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="true"></uib-pagination>
 
 
     </div>

@@ -12,7 +12,8 @@
             $scope.allLogs = response.data;
             $scope.totalItems = $scope.allLogs.length;
             $scope.currentPage = 1;
-            $scope.itemsPerPage = 20;
+            $scope.itemsPerPage = 5;
+            $scope.maxSize = 20;
 
         }, function myError(response) {
             alert(response.statusText);

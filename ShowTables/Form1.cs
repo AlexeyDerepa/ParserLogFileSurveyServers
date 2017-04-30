@@ -20,6 +20,8 @@ namespace ShowTables
         public Form1()
         {
             InitializeComponent();
+            myDB = new MyDB("DBConnection");
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -165,20 +167,20 @@ namespace ShowTables
 
         private void button5_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "mdf files (*.mdf)|*.mdf";
-            openFileDialog1.InitialDirectory = System.Environment.GetEnvironmentVariable("USERPROFILE");
+            //openFileDialog1.Filter = "mdf files (*.mdf)|*.mdf";
+            //openFileDialog1.InitialDirectory = System.Environment.GetEnvironmentVariable("USERPROFILE");
 
-            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
+            //if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+            //    return;
 
-            string filename = openFileDialog1.SafeFileName;
-            if (filename.IndexOf(".mdf")==-1)
-            {
-                MessageBox.Show("Choose file with .mdf extention");
-                return;
-            }
-            filename = filename.Substring(0, openFileDialog1.SafeFileName.IndexOf(".mdf"));
-            myDB = new MyDB(filename);
+            //string filename = openFileDialog1.SafeFileName;
+            //if (filename.IndexOf(".mdf")==-1)
+            //{
+            //    MessageBox.Show("Choose file with .mdf extention");
+            //    return;
+            //}
+            //filename = filename.Substring(0, openFileDialog1.SafeFileName.IndexOf(".mdf"));
+            //myDB = new MyDB(filename);
         }
 
         private void button6_Click(object sender, EventArgs e)

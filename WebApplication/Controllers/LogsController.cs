@@ -11,7 +11,7 @@ namespace WebApplication.Controllers
     public class LogsController : ApiController
     {
 
-        ProcessinglogsAndDB.MyDB db = new ProcessinglogsAndDB.MyDB("LogContext");
+        ProcessinglogsAndDB.MyDB db = new ProcessinglogsAndDB.MyDB("DBConnection");
 
         public IEnumerable<CombinedData> Get()
         {
